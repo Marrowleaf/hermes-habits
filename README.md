@@ -1,35 +1,46 @@
-# 🔧 hermes-habits
+# Habits
 
-A [Hermes Agent](https://hermes-agent.nousresearch.com/) skill for **habits** (health category).
+> Track daily habits in Obsidian with streaks, completion rates, and weekly/monthly rollups.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/Marrowleaf/hermes-habits)
+
+## Features
+
+- Natural language habit logging ("I meditated", "missed reading")
+- Streak tracking with automatic calculation from log data
+- Weekly and monthly habit reports with completion rates
+- Custom habit categories and target frequencies (daily, weekdays, 3x/week)
+- Obsidian-integrated data storage with PARA structure
+- Cross-references with fitness-nutrition skill for workout data
 
 ## Installation
 
 ```bash
-cd ~/.hermes/skills/health
-git clone https://github.com/Marrowleaf/hermes-habits.git habits
+hermes skills install health/habits
 ```
+
+Or manually clone into `~/.hermes/skills/health/habits/`.
 
 ## Usage
 
-Once installed, this skill is automatically detected by Hermes Agent. Load it with:
-
 ```
-skill_view(name="habits")
+habits log "drank 2L water"
+habits log "missed meditation"
+habits streak meditation
+habits report week
+habits add gym --category fitness --target 5x-week
+habits summary
 ```
 
-Or simply ask Hermes to do something related to this skill's functionality.
+## Configuration
 
-## Structure
+Store habit data in your Obsidian vault at `~/obsidian-vault/3-Resources/habits/`. Configure habits and categories in `config.md`. All dates use BST (UTC+1) for Oakham, UK.
 
-- `SKILL.md` — Full skill documentation with commands, examples, and pitfalls
-- `references/` — Reference materials (if any)
-- `scripts/` — Utility scripts (if any)
-- `templates/` — Template files (if any)
+## Requirements
+
+- Hermes Agent v0.12+
+- Obsidian vault (for data storage)
 
 ## License
 
-MIT — see [LICENSE](LICENSE) for details.
-
----
-
-Built with ❤️ by [James Durrant](https://github.com/Marrowleaf) and [Hermes Agent](https://hermes-agent.nousresearch.com/)
+MIT
