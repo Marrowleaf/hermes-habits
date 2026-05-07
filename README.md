@@ -44,3 +44,8 @@ Store habit data in your Obsidian vault at `~/obsidian-vault/3-Resources/habits/
 ## License
 
 MIT
+
+## Related Hermes Skills
+- [hermes-apple-health-sync](https://github.com/Marrowleaf/hermes-apple-health-sync) — Apple Health data sync and analysis
+- [hermes-meal-planner](https://github.com/Marrowleaf/hermes-meal-planner) — Meal planning and nutrition tracking
+- [hermes-routine-optimizer](https://github.com/Marrowleaf/hermes-routine-optimizer) — Optimize daily routines and schedules
